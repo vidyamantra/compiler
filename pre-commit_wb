@@ -1,0 +1,38 @@
+#!/bin/sh
+BASEDIR="$( cd  "$( dirname "${BASH_SOURCE[0]}" )" && cd ../../ && pwd )"
+java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
+        --js $BASEDIR/src/vmchatlib.js \
+        --js $BASEDIR/src/vcan.js \
+        --js $BASEDIR/src/script.js \
+        --js $BASEDIR/src/wb_utility.js \
+        --js $BASEDIR/src/en.js \
+        --js $BASEDIR/src/lang.js \
+        --js $BASEDIR/src/view.js \
+        --js $BASEDIR/src/system.js \
+        --js $BASEDIR/src/packetcontainer.js \
+        --js $BASEDIR/src/drawobject.js \
+        --js $BASEDIR/src/makeobj.js \
+        --js $BASEDIR/src/utility.js \
+        --js $BASEDIR/src/vcanmain.js \
+        --js $BASEDIR/src/events.js \
+        --js $BASEDIR/src/virtualbox.js \
+        --js $BASEDIR/src/interact.js \
+        --js $BASEDIR/src/rectangle.js \
+        --js $BASEDIR/src/oval.js \
+        --js $BASEDIR/src/triangle.js \
+        --js $BASEDIR/src/line.js \
+        --js $BASEDIR/src/text.js \
+        --js $BASEDIR/src/freedrawing.js \
+        --js $BASEDIR/src/path.js \
+        --js $BASEDIR/src/mouse.js \
+        --js $BASEDIR/src/readyfreehandobj.js \
+        --js $BASEDIR/src/replay.js \
+        --js $BASEDIR/src/readytextobj.js \
+        --js $BASEDIR/src/keyboard.js \
+        --js $BASEDIR/src/adapter.js \
+        --js $BASEDIR/src/video.js \
+        --js $BASEDIR/src/bridge.js \
+        --js $BASEDIR/src/video_resize.js \
+        --js $BASEDIR/src/optimization.js \
+        --js $BASEDIR/src/response.js \
+        --js_output_file $BASEDIR/build/wb.min.js
