@@ -1,9 +1,9 @@
 #!/bin/sh
 BASEDIR="$( cd  "$( dirname "${BASH_SOURCE[0]}" )" && cd ../../ && pwd )"
 java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
-        --js $BASEDIR/src/vmchatlib.js \
+        --js $BASEDIR/src/vmapp.js \
         --js $BASEDIR/src/vcan.js \
-        --js $BASEDIR/src/script.js \
+        --js $BASEDIR/src/whboard.js \
         --js $BASEDIR/src/wb_utility.js \
         --js $BASEDIR/src/en.js \
         --js $BASEDIR/src/lang.js \
@@ -30,9 +30,26 @@ java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZAT
         --js $BASEDIR/src/readytextobj.js \
         --js $BASEDIR/src/keyboard.js \
         --js $BASEDIR/src/adapter.js \
-        --js $BASEDIR/src/video.js \
+        --js $BASEDIR/src/com.js \
+        --js $BASEDIR/src/resampler.js \
+        --js $BASEDIR/src/media.js \
         --js $BASEDIR/src/bridge.js \
-        --js $BASEDIR/src/video_resize.js \
         --js $BASEDIR/src/optimization.js \
         --js $BASEDIR/src/response.js \
+        --js $BASEDIR/src/lzstring.js \
+        --js $BASEDIR/src/g711.js \
+        --js $BASEDIR/src/getscreen.js \
+        --js $BASEDIR/src/dirtycorner.js \
+        --js $BASEDIR/src/vutility.js \
+        --js $BASEDIR/src/screenshare.js \
+        --js $BASEDIR/src/recorder.js \
+        --js $BASEDIR/src/storage.js \
+        --js $BASEDIR/src/user.js \
+        --js $BASEDIR/csrc/footer.js \
+        --js $BASEDIR/csrc/jquery.ui.chatlist.js \
+        --js $BASEDIR/csrc/jquery.ui.chatbox.js \
+        --js $BASEDIR/csrc/jquery.ui.chatroom.js \
+        --js $BASEDIR/csrc/chatboxManager.js \
+        --js $BASEDIR/csrc/lib.js \
+        --js $BASEDIR/csrc/lang.en.js \
         --js_output_file $BASEDIR/build/wb.min.js
