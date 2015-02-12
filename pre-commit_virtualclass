@@ -1,4 +1,3 @@
-#!/bin/sh
 BASEDIR="$( cd  "$( dirname "${BASH_SOURCE[0]}" )" && cd ../../ && pwd )"
 java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
         --js $BASEDIR/src/vmapp.js \
@@ -30,7 +29,6 @@ java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZAT
         --js $BASEDIR/src/readytextobj.js \
         --js $BASEDIR/src/keyboard.js \
         --js $BASEDIR/src/adapter.js \
-        --js $BASEDIR/src/com.js \
         --js $BASEDIR/src/resampler.js \
         --js $BASEDIR/src/media.js \
         --js $BASEDIR/src/bridge.js \
@@ -45,11 +43,12 @@ java -jar $BASEDIR/../compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZAT
         --js $BASEDIR/src/recorder.js \
         --js $BASEDIR/src/storage.js \
         --js $BASEDIR/src/user.js \
-        --js $BASEDIR/csrc/footer.js \
-        --js $BASEDIR/csrc/jquery.ui.chatlist.js \
-        --js $BASEDIR/csrc/jquery.ui.chatbox.js \
-        --js $BASEDIR/csrc/jquery.ui.chatroom.js \
-        --js $BASEDIR/csrc/chatboxManager.js \
-        --js $BASEDIR/csrc/lib.js \
-        --js $BASEDIR/csrc/lang.en.js \
+        --js $BASEDIR/chat/chat.js \
+        --js $BASEDIR/chat/footer.js \
+        --js $BASEDIR/chat/jquery.ui.chatlist.js \
+        --js $BASEDIR/chat/jquery.ui.chatbox.js \
+        --js $BASEDIR/chat/jquery.ui.chatroom.js \
+        --js $BASEDIR/chat/chatboxManager.js \
+        --js $BASEDIR/chat/lib.js \
+        --js $BASEDIR/chat/lang.en.js \
         --js_output_file $BASEDIR/build/wb.min.js
