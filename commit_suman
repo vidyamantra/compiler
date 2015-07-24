@@ -1,0 +1,70 @@
+BASEDIR="/var/www/html/suman-repo/virtualclass"
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
+--js $BASEDIR/src/virtualclass.js \
+--js $BASEDIR/src/whiteboard-canvas.js \
+--js $BASEDIR/src/whiteboard.js \
+--js $BASEDIR/src/whiteboard-utility.js \
+--js $BASEDIR/src/lang-en.js \
+--js $BASEDIR/src/lang.js \
+--js $BASEDIR/src/view.js \
+--js $BASEDIR/src/environment-validation.js \
+--js $BASEDIR/src/whiteboard-packetcontainer.js \
+--js $BASEDIR/src/whiteboard-drawobject.js \
+--js $BASEDIR/src/whiteboard-make-object.js \
+--js $BASEDIR/src/whiteboard-canvas-utility.js \
+--js $BASEDIR/src/whiteboard-canvas-main.js \
+--js $BASEDIR/src/whiteboard-events.js \
+--js $BASEDIR/src/whiteboard-virtualbox.js \
+--js $BASEDIR/src/whiteboard-interact.js \
+--js $BASEDIR/src/whiteboard-rectangle.js \
+--js $BASEDIR/src/whiteboard-oval.js \
+--js $BASEDIR/src/whiteboard-triangle.js \
+--js $BASEDIR/src/whiteboard-line.js \
+--js $BASEDIR/src/whiteboard-text.js \
+--js $BASEDIR/src/whiteboard-freedrawing.js \
+--js $BASEDIR/src/whiteboard-path.js \
+--js $BASEDIR/src/whiteboard-mouse.js \
+--js $BASEDIR/src/whiteboard-readyfreehandobj.js \
+--js $BASEDIR/src/whiteboard-refresh-play.js \
+--js $BASEDIR/src/whiteboard-readytextobj.js \
+--js $BASEDIR/src/whiteboard-keyboard.js \
+--js $BASEDIR/src/webrtc-adapter.js \
+--js $BASEDIR/src/audio-resampler.js \
+--js $BASEDIR/src/media.js \
+--js $BASEDIR/src/whiteboard-packet-queue.js \
+--js $BASEDIR/src/whiteboard-optimization.js \
+--js $BASEDIR/src/receive-messages-response.js \
+--js $BASEDIR/src/lzstring.js \
+--js $BASEDIR/src/audio-codec-g711.js \
+--js $BASEDIR/src/screenshare-getscreen.js \
+--js $BASEDIR/src/screenshare-dirtycorner.js \
+--js $BASEDIR/src/utility.js \
+--js $BASEDIR/src/screenshare.js \
+--js $BASEDIR/src/record-play.js \
+--js $BASEDIR/src/indexeddb-storage.js \
+--js $BASEDIR/src/footer-control-user.js \
+--js $BASEDIR/src/xhr.js \
+--js $BASEDIR/src/popup.js \
+--js $BASEDIR/src/storage-array-base64-converter.js \
+--js $BASEDIR/src/progressbar.js \
+--js $BASEDIR/src/youtube-iframe-api.js	 \
+--js $BASEDIR/src/youtube.js \
+--js $BASEDIR/codemirror/lib/codemirror.js \
+--js $BASEDIR/src/editor-markdown.js \
+--js $BASEDIR/src/ot-server.js \
+--js $BASEDIR/src/virtualclass-adapter.js \
+--js $BASEDIR/src/vceditor.js \
+--js $BASEDIR/src/editor.js \
+--js $BASEDIR/chat/chat.js \
+--js $BASEDIR/chat/footer.js \
+--js $BASEDIR/chat/jquery.ui.chatlist.js \
+--js $BASEDIR/chat/jquery.ui.chatbox.js \
+--js $BASEDIR/chat/jquery.ui.chatroom.js \
+--js $BASEDIR/chat/chatboxManager.js \
+--js $BASEDIR/chat/lib.js \
+--js $BASEDIR/chat/lang.en.js \
+--js_output_file $BASEDIR/build/wb.min.js
+
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
+--js $BASEDIR/bundle/io/src/iolib.js \
+--js_output_file $BASEDIR/bundle/io/build/iolib.min.js
