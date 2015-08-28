@@ -1,5 +1,10 @@
 BASEDIR="/var/www/html/virtualclass"
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
+--js $BASEDIR/src/roles.js \
+--js $BASEDIR/src/io-storage.js \
+--js $BASEDIR/src/io-missing-packets.js \
+--js $BASEDIR/src/io-adapter.js \
+--js $BASEDIR/src/io-ping-pong.js \
 --js $BASEDIR/src/virtualclass.js \
 --js $BASEDIR/src/whiteboard-canvas.js \
 --js $BASEDIR/src/whiteboard.js \
@@ -52,7 +57,23 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/codemirror/lib/codemirror.js \
 --js $BASEDIR/src/editor-markdown.js \
 --js $BASEDIR/src/ot-server.js \
---js $BASEDIR/src/virtualclass-adapter.js \
+--js $BASEDIR/src/editor-utils.js \
+--js $BASEDIR/src/editor-rich-toolbar.js \
+--js $BASEDIR/src/editor-text-op.js \
+--js $BASEDIR/src/ot-text-operation.js \
+--js $BASEDIR/src/ot-wrapped-operation.js \
+--js $BASEDIR/src/ot-cursor.js \
+--js $BASEDIR/src/ot-undo-manager.js \
+--js $BASEDIR/src/ot-client.js \
+--js $BASEDIR/src/ot-editor-client.js \
+--js $BASEDIR/src/editor-span.js \
+--js $BASEDIR/src/editor-annotation-list.js \
+--js $BASEDIR/src/editor-attribute-constants.js \
+--js $BASEDIR/src/editor-line-formatting.js \
+--js $BASEDIR/src/editor-serialize-html.js \
+--js $BASEDIR/src/editor-parse-html.js \
+--js $BASEDIR/src/ot-codemirror-adapter.js \
+--js $BASEDIR/src/ot-adapter.js \
 --js $BASEDIR/src/vceditor.js \
 --js $BASEDIR/src/editor.js \
 --js $BASEDIR/chat/chat.js \
@@ -63,8 +84,10 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/chat/chatboxManager.js \
 --js $BASEDIR/chat/lib.js \
 --js $BASEDIR/chat/lang.en.js \
+--create_source_map $BASEDIR/build/wb-map \
 --js_output_file $BASEDIR/build/wb.min.js
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
 --js $BASEDIR/bundle/io/src/iolib.js \
+--create_source_map $BASEDIR/bundle/io/build/iolib-map \
 --js_output_file $BASEDIR/bundle/io/build/iolib.min.js
