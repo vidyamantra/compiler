@@ -1,5 +1,34 @@
+ #!/bin/sh
+
 BASEDIR="/var/www/html/virtualclass"
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+--js $BASEDIR/external/src/jquery-1.12.4.js \
+--js $BASEDIR/external/src/jquery-ui.js \
+--js $BASEDIR/external/src/handlebars-v4.0.8.js \
+--js $BASEDIR/external/src/codemirror.js \
+--js $BASEDIR/external/src/codemirror-continuelist.js \
+--js $BASEDIR/external/src/codemirror-xml.js \
+--js $BASEDIR/external/src/codemirror-markdown.js \
+--js $BASEDIR/external/src/mo_slickQuiz.js \
+--js $BASEDIR/external/src/poll-d3.js \
+--js $BASEDIR/external/src/poll-c3.js \
+--js $BASEDIR/external/src/video.js \
+--js $BASEDIR/external/src/youtube.js \
+--js $BASEDIR/external/src/videojs-contrib-hls.js \
+--js $BASEDIR/external/src/s3.fine-uploader.js \
+--js $BASEDIR/external/src/bootstrap-3.3.7.js \
+--js $BASEDIR/external/src/pdf.js \
+--create_source_map $BASEDIR/build/src/external-min \
+--js_output_file $BASEDIR/build/src/external.min.js
+
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+--js $BASEDIR/external/src/pdf.worker.js \
+--create_source_map $BASEDIR/build/src/wb-map \
+--js_output_file $BASEDIR/build/src/wb.min.worker.js
+
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+--js $BASEDIR/src/iolib.js \
+--js $BASEDIR/src/modernizr.js \
 --js $BASEDIR/src/roles.js \
 --js $BASEDIR/src/io-storage.js \
 --js $BASEDIR/src/io-missing-packets.js \
@@ -36,6 +65,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/webrtc-adapter.js \
 --js $BASEDIR/src/audio-resampler.js \
 --js $BASEDIR/src/media.js \
+--js $BASEDIR/src/pptshare.js \
 --js $BASEDIR/src/whiteboard-packet-queue.js \
 --js $BASEDIR/src/whiteboard-optimization.js \
 --js $BASEDIR/src/receive-messages-response.js \
@@ -49,13 +79,10 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/indexeddb-storage.js \
 --js $BASEDIR/src/footer-control-user.js \
 --js $BASEDIR/src/xhr.js \
+--js $BASEDIR/src/xhrn.js \
 --js $BASEDIR/src/popup.js \
 --js $BASEDIR/src/storage-array-base64-converter.js \
 --js $BASEDIR/src/progressbar.js \
---js $BASEDIR/src/youtube-iframe-api.js  \
---js $BASEDIR/src/youtube.js \
---js $BASEDIR/codemirror/lib/codemirror.js \
---js $BASEDIR/src/editor-markdown.js \
 --js $BASEDIR/src/ot-server.js \
 --js $BASEDIR/src/editor-utils.js \
 --js $BASEDIR/src/editor-rich-toolbar.js \
@@ -76,18 +103,39 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/ot-adapter.js \
 --js $BASEDIR/src/vceditor.js \
 --js $BASEDIR/src/editor.js \
---js $BASEDIR/chat/chat.js \
---js $BASEDIR/chat/footer.js \
---js $BASEDIR/chat/jquery.ui.chatlist.js \
---js $BASEDIR/chat/jquery.ui.chatbox.js \
---js $BASEDIR/chat/jquery.ui.chatroom.js \
---js $BASEDIR/chat/chatboxManager.js \
---js $BASEDIR/chat/lib.js \
---js $BASEDIR/chat/lang.en.js \
---create_source_map $BASEDIR/build/wb-map \
---js_output_file $BASEDIR/build/wb.min.js
-
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS \
---js $BASEDIR/bundle/io/src/iolib.js \
---create_source_map $BASEDIR/bundle/io/build/iolib-map \
---js_output_file $BASEDIR/bundle/io/build/iolib.min.js
+--js $BASEDIR/src/chat.js \
+--js $BASEDIR/src/chat-footer.js \
+--js $BASEDIR/src/jquery.ui.chatlist.js \
+--js $BASEDIR/src/jquery.ui.chatbox.js \
+--js $BASEDIR/src/jquery.ui.chatroom.js \
+--js $BASEDIR/src/chat-boxManager.js \
+--js $BASEDIR/src/chat-lib.js \
+--js $BASEDIR/src/chat-lang.en.js \
+--js $BASEDIR/src/precheck.js \
+--js $BASEDIR/src/video-base64.min.js \
+--js $BASEDIR/src/video-ajax.js \
+--js $BASEDIR/src/video-script.js \
+--js $BASEDIR/src/video-host.js \
+--js $BASEDIR/src/poll.js \
+--js $BASEDIR/src/dashboard.js \
+--js $BASEDIR/src/upload-video.js \
+--js $BASEDIR/src/congrea-uploader.js \
+--js $BASEDIR/src/page.js \
+--js $BASEDIR/src/document-share.js \
+--js $BASEDIR/src/quiz.js \
+--js $BASEDIR/src/doNotesMain.js \
+--js $BASEDIR/src/multi-video.js \
+--js $BASEDIR/src/pdf.js \
+--js $BASEDIR/src/zoom.js \
+--js $BASEDIR/src/pdf-render.js \
+--js $BASEDIR/src/whiteboard-common.js \
+--js $BASEDIR/src/server-data.js \
+--js $BASEDIR/src/api.js \
+--js $BASEDIR/src/raise-hand.js \
+--js $BASEDIR/src/color-selector.js \
+--js $BASEDIR/src/chroma.js \
+--js $BASEDIR/src/app-settings.js \
+--js $BASEDIR/src/app-setting-media.js \
+--js $BASEDIR/src/network.js \
+--create_source_map $BASEDIR/build/src/wb-map \
+--js_output_file $BASEDIR/build/src/wb.min.js
