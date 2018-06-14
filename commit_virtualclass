@@ -22,9 +22,14 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js_output_file $BASEDIR/build/src/external.min.js
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+--js $BASEDIR/external/src/pdf.js \
+--create_source_map $BASEDIR/build/src/pdf-map \
+--js_output_file $BASEDIR/build/src/pdf.min.js
+
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
 --js $BASEDIR/external/src/pdf.worker.js \
---create_source_map $BASEDIR/build/src/wb-map \
---js_output_file $BASEDIR/build/src/wb.min.worker.js
+--create_source_map $BASEDIR/build/src/pdf-worker-map \
+--js_output_file $BASEDIR/build/src/pdf.min.worker.js
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
 --js $BASEDIR/src/iolib.js \
@@ -125,7 +130,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/quiz.js \
 --js $BASEDIR/src/doNotesMain.js \
 --js $BASEDIR/src/multi-video.js \
---js $BASEDIR/src/pdf.js \
 --js $BASEDIR/src/zoom.js \
 --js $BASEDIR/src/pdf-render.js \
 --js $BASEDIR/src/whiteboard-common.js \
@@ -139,3 +143,4 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/network.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --js_output_file $BASEDIR/build/src/wb.min.js
+
