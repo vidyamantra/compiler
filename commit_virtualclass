@@ -1,35 +1,6 @@
  #!/bin/sh
 
 BASEDIR="/var/www/html/virtualclass"
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
---js $BASEDIR/external/src/jquery-1.12.4.js \
---js $BASEDIR/external/src/jquery-ui.js \
---js $BASEDIR/external/src/handlebars-v4.0.8.js \
---js $BASEDIR/external/src/codemirror.js \
---js $BASEDIR/external/src/codemirror-continuelist.js \
---js $BASEDIR/external/src/codemirror-xml.js \
---js $BASEDIR/external/src/codemirror-markdown.js \
---js $BASEDIR/external/src/mo_slickQuiz.js \
---js $BASEDIR/external/src/poll-d3.js \
---js $BASEDIR/external/src/poll-c3.js \
---js $BASEDIR/external/src/video.js \
---js $BASEDIR/external/src/youtube.js \
---js $BASEDIR/external/src/videojs-contrib-hls.js \
---js $BASEDIR/external/src/s3.fine-uploader.js \
---js $BASEDIR/external/src/bootstrap-3.3.7.js \
---js $BASEDIR/external/src/pdf.js \
---create_source_map $BASEDIR/build/src/external-min \
---js_output_file $BASEDIR/build/src/external.min.js
-
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
---js $BASEDIR/external/src/pdf.js \
---create_source_map $BASEDIR/build/src/pdf-map \
---js_output_file $BASEDIR/build/src/pdf.min.js
-
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
---js $BASEDIR/external/src/pdf.worker.js \
---create_source_map $BASEDIR/build/src/pdf-worker-map \
---js_output_file $BASEDIR/build/src/pdf.min.worker.js
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
 --js $BASEDIR/src/iolib.js \
@@ -142,5 +113,8 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/app-setting-media.js \
 --js $BASEDIR/src/network.js \
 --create_source_map $BASEDIR/build/src/wb-map \
---js_output_file $BASEDIR/build/src/wb.min.js
-
+--source_map_format=V3 \
+--source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
+--output_wrapper "%output%
+//# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
+--js_output_file $BASEDIR/build/src/wb.min.js 
