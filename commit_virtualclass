@@ -118,3 +118,4 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --output_wrapper "%output%
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 
+
