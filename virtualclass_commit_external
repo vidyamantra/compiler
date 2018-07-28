@@ -22,3 +22,4 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/external/src/vhcheck.js \
 --create_source_map $BASEDIR/build/src/external-min \
 --js_output_file $BASEDIR/build/src/external.min.js
+
