@@ -112,6 +112,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/app-settings.js \
 --js $BASEDIR/src/app-setting-media.js \
 --js $BASEDIR/src/network.js \
+--js $BASEDIR/src/gesture.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
 --source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \

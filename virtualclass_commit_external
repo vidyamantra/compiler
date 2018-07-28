@@ -3,10 +3,6 @@
 BASEDIR="/var/www/html/virtualclass"
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
---js $BASEDIR/external/src/codemirror.js \
---js_output_file $BASEDIR/build/src/codemirror.min.js
-
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
 --js $BASEDIR/external/src/jquery-1.12.4.js \
 --js $BASEDIR/external/src/jquery-ui.js \
 --js $BASEDIR/external/src/handlebars-v4.0.8.js \
@@ -19,8 +15,10 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/external/src/s3.fine-uploader.js \
 --js $BASEDIR/external/src/bootstrap-3.3.7.js \
 --js $BASEDIR/external/src/pdf.js \
+--js $BASEDIR/external/src/codemirror.js \
 --js $BASEDIR/external/src/codemirror-continuelist.js \
 --js $BASEDIR/external/src/codemirror-xml.js \
 --js $BASEDIR/external/src/codemirror-markdown.js \
+--js $BASEDIR/external/src/vhcheck.js \
 --create_source_map $BASEDIR/build/src/external-min \
 --js_output_file $BASEDIR/build/src/external.min.js
