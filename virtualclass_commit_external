@@ -20,6 +20,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/external/src/codemirror-xml.js \
 --js $BASEDIR/external/src/codemirror-markdown.js \
 --js $BASEDIR/external/src/vhcheck.js \
+--js $BASEDIR/external/src/shadow-dom.js \
 --create_source_map $BASEDIR/build/src/external-min \
 --js_output_file $BASEDIR/build/src/external.min.js
 
