@@ -3,7 +3,7 @@
 BASEDIR="/var/www/html/virtualclass"
 
 java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
---js $BASEDIR/src/iolib.js \
+--js $BASEDIR/src/io.js \
 --js $BASEDIR/src/modernizr.js \
 --js $BASEDIR/src/roles.js \
 --js $BASEDIR/src/io-storage.js \
@@ -115,6 +115,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/gesture.js \
 --js $BASEDIR/src/page-navigation.js \
 --js $BASEDIR/src/chat-container-event.js \
+--js $BASEDIR/src/mic-testing.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
 --source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
