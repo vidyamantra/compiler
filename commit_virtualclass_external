@@ -13,7 +13,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/external/src/youtube.js \
 --js $BASEDIR/external/src/videojs-contrib-hls.js \
 --js $BASEDIR/external/src/s3.fine-uploader.js \
---js $BASEDIR/external/src/bootstrap-3.3.7.js \
 --js $BASEDIR/external/src/pdf.js \
 --js $BASEDIR/external/src/codemirror.js \
 --js $BASEDIR/external/src/codemirror-continuelist.js \
