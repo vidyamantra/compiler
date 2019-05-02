@@ -2,7 +2,7 @@
 
 BASEDIR="/var/www/html/virtualclass"
 
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ECMASCRIPT_2017 \
 --js $BASEDIR/src/io.js \
 --js $BASEDIR/src/modernizr.js \
 --js $BASEDIR/src/roles.js \
@@ -110,7 +110,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/color-selector.js \
 --js $BASEDIR/src/chroma.js \
 --js $BASEDIR/src/app-settings.js \
---js $BASEDIR/src/app-setting-media.js \
 --js $BASEDIR/src/network.js \
 --js $BASEDIR/src/gesture.js \
 --js $BASEDIR/src/page-navigation.js \
