@@ -109,7 +109,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/raise-hand.js \
 --js $BASEDIR/src/color-selector.js \
 --js $BASEDIR/src/chroma.js \
---js $BASEDIR/src/app-settings.js \
 --js $BASEDIR/src/network.js \
 --js $BASEDIR/src/gesture.js \
 --js $BASEDIR/src/page-navigation.js \
@@ -117,6 +116,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/mic-testing.js \
 --js $BASEDIR/src/common-xhr.js \
 --js $BASEDIR/src/modal.js \
+--js $BASEDIR/src/idb.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
 --source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
