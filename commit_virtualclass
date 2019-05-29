@@ -109,6 +109,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/raise-hand.js \
 --js $BASEDIR/src/color-selector.js \
 --js $BASEDIR/src/chroma.js \
+--js $BASEDIR/src/app-settings.js \
 --js $BASEDIR/src/network.js \
 --js $BASEDIR/src/gesture.js \
 --js $BASEDIR/src/page-navigation.js \
