@@ -2,7 +2,16 @@
 
 BASEDIR="/var/www/html/virtualclass"
 
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ECMASCRIPT_2017 \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 \
+--js $BASEDIR/src/worker/screendecode.js \
+--js $BASEDIR/src/worker/screenworker.js \
+--js $BASEDIR/src/worker/storage-array-base64-converter.js \
+--js $BASEDIR/src/worker/worker-io.js \
+--js $BASEDIR/src/worker/worker-audio-rec.js \
+--js $BASEDIR/src/worker/worker-audio-send.js \
+--js $BASEDIR/src/worker/worklet-audio-rec.js \
+--js $BASEDIR/src/worker/worklet-audio-send.js \
+--js $BASEDIR/src/worker/webptopng.js \
 --js $BASEDIR/src/io.js \
 --js $BASEDIR/src/modernizr.js \
 --js $BASEDIR/src/roles.js \
@@ -108,7 +117,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/api.js \
 --js $BASEDIR/src/raise-hand.js \
 --js $BASEDIR/src/color-selector.js \
---js $BASEDIR/src/chroma.js \
 --js $BASEDIR/src/app-settings.js \
 --js $BASEDIR/src/network.js \
 --js $BASEDIR/src/gesture.js \
@@ -116,8 +124,14 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/chat-container-event.js \
 --js $BASEDIR/src/mic-testing.js \
 --js $BASEDIR/src/common-xhr.js \
---js $BASEDIR/src/modal.js \
+--js $BASEDIR/src/settings.js \
 --js $BASEDIR/src/idb.js \
+--js $BASEDIR/src/modal.js \
+--js $BASEDIR/src/user-join-operation.js \
+--js $BASEDIR/src/io-event-api.js \
+--js $BASEDIR/src/receive-function.js \
+--js $BASEDIR/src/bootstrap.js \
+--js $BASEDIR/src/index.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
 --source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
@@ -125,3 +139,12 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 
 
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 \
+--js $BASEDIR/src/audio-resampler.js \
+--js $BASEDIR/src/audio-codec-g711.js \
+--create_source_map $BASEDIR/build/src/audio-map \
+--source_map_format=V3 \
+--source_map_location_mapping="/var/www/html/virtualclass/build/src/|https://live.congrea.net/virtualclass/build/src/" \
+--output_wrapper "%output%
+//# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/audio-g711" \
+--js_output_file $BASEDIR/build/src/audio-g711-and-resampler.min.js
