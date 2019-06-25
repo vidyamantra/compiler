@@ -130,6 +130,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/user-join-operation.js \
 --js $BASEDIR/src/io-event-api.js \
 --js $BASEDIR/src/receive-function.js \
+--js $BASEDIR/src/config.js \
 --js $BASEDIR/src/bootstrap.js \
 --js $BASEDIR/src/index.js \
 --create_source_map $BASEDIR/build/src/wb-map \
