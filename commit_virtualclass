@@ -51,11 +51,9 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/audio-resampler.js \
 --js $BASEDIR/src/media.js \
 --js $BASEDIR/src/pptshare.js \
---js $BASEDIR/src/whiteboard-packet-queue.js \
 --js $BASEDIR/src/whiteboard-optimization.js \
 --js $BASEDIR/src/receive-messages-response.js \
 --js $BASEDIR/src/lzstring.js \
---js $BASEDIR/src/audio-codec-g711.js \
 --js $BASEDIR/src/screenshare-getscreen.js \
 --js $BASEDIR/src/screenshare-dirtycorner.js \
 --js $BASEDIR/src/utility.js \
@@ -121,16 +119,17 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/network.js \
 --js $BASEDIR/src/gesture.js \
 --js $BASEDIR/src/page-navigation.js \
+--js $BASEDIR/src/modal.js \
 --js $BASEDIR/src/chat-container-event.js \
 --js $BASEDIR/src/mic-testing.js \
 --js $BASEDIR/src/common-xhr.js \
 --js $BASEDIR/src/settings.js \
 --js $BASEDIR/src/idb.js \
---js $BASEDIR/src/modal.js \
 --js $BASEDIR/src/user-join-operation.js \
 --js $BASEDIR/src/io-event-api.js \
 --js $BASEDIR/src/receive-function.js \
 --js $BASEDIR/src/config.js \
+--js $BASEDIR/src/order-list.js \
 --js $BASEDIR/src/bootstrap.js \
 --js $BASEDIR/src/index.js \
 --create_source_map $BASEDIR/build/src/wb-map \
@@ -140,12 +139,3 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 
 
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 \
---js $BASEDIR/src/audio-resampler.js \
---js $BASEDIR/src/audio-codec-g711.js \
---create_source_map $BASEDIR/build/src/audio-map \
---source_map_format=V3 \
---source_map_location_mapping="/var/www/html/virtualclass/build/src/|https://live.congrea.net/virtualclass/build/src/" \
---output_wrapper "%output%
-//# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/audio-g711" \
---js_output_file $BASEDIR/build/src/audio-g711-and-resampler.min.js

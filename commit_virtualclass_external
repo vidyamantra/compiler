@@ -21,7 +21,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/external/src/codemirror-markdown.js \
 --js $BASEDIR/external/src/vhcheck.js \
 --js $BASEDIR/external/src/chroma.js \
---js $BASEDIR/external/src/shadow-dom.js \
 --js $BASEDIR/external/src/wave.js \
 --js $BASEDIR/external/src/wave-mic.js \
 --create_source_map $BASEDIR/build/src/external-min \
