@@ -26,7 +26,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/lang-en.js \
 --js $BASEDIR/src/lang.js \
 --js $BASEDIR/src/view.js \
---js $BASEDIR/src/environment-validation.js \
+--js $BASEDIR/src/system.js \
 --js $BASEDIR/src/whiteboard-packetcontainer.js \
 --js $BASEDIR/src/whiteboard-drawobject.js \
 --js $BASEDIR/src/whiteboard-make-object.js \
