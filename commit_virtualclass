@@ -122,7 +122,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/modal.js \
 --js $BASEDIR/src/chat-container-event.js \
 --js $BASEDIR/src/mic-testing.js \
---js $BASEDIR/src/common-xhr.js \
 --js $BASEDIR/src/settings.js \
 --js $BASEDIR/src/idb.js \
 --js $BASEDIR/src/user-join-operation.js \
