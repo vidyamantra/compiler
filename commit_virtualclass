@@ -2,7 +2,7 @@
 
 BASEDIR="/var/www/html/virtualclass"
 
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2018 --language_out=ECMASCRIPT_2018 \
 --js $BASEDIR/src/worker/screendecode.js \
 --js $BASEDIR/src/worker/screenworker.js \
 --js $BASEDIR/src/worker/storage-array-base64-converter.js \
@@ -130,6 +130,14 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/config.js \
 --js $BASEDIR/src/order-list.js \
 --js $BASEDIR/src/bootstrap.js \
+--js $BASEDIR/src/note.js \
+--js $BASEDIR/src/bookmark.js \
+--js $BASEDIR/src/question-answer.js \
+--js $BASEDIR/src/user-interactivity-engine.js \
+--js $BASEDIR/src/user-interactivity-events.js \
+--js $BASEDIR/src/user-interactivity-renderer.js \
+--js $BASEDIR/src/user-interactivity.js \
+--js $BASEDIR/src/rightbar.js \
 --js $BASEDIR/src/back-detect.js \
 --js $BASEDIR/src/index.js \
 --create_source_map $BASEDIR/build/src/wb-map \
@@ -138,4 +146,3 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --output_wrapper "%output%
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 
-
