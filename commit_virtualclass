@@ -1,8 +1,9 @@
  #!/bin/sh
 
-BASEDIR="/var/www/html/virtualclass"
+BASEDIR="/Applications/Mamp/htdocs/virtualclass"
 
-java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2018 --language_out=ECMASCRIPT_2018 \
+java -jar /Applications/Mamp/htdocs/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2018 --language_out=ECMASCRIPT_2018 \
+--js $BASEDIR/src/keyboard.js \
 --js $BASEDIR/src/worker/screendecode.js \
 --js $BASEDIR/src/worker/screenworker.js \
 --js $BASEDIR/src/worker/storage-array-base64-converter.js \
@@ -20,38 +21,30 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/io-adapter.js \
 --js $BASEDIR/src/io-ping-pong.js \
 --js $BASEDIR/src/virtualclass.js \
---js $BASEDIR/src/whiteboard-canvas.js \
 --js $BASEDIR/src/whiteboard.js \
 --js $BASEDIR/src/whiteboard-utility.js \
---js $BASEDIR/src/lang-en.js \
+--js $BASEDIR/src/whiteboard-active.js \
+--js $BASEDIR/src/whiteboard-replay.js \
+--js $BASEDIR/src/whiteboard-protocol.js \
+--js $BASEDIR/src/whiteboard-wrapper.js \
+--js $BASEDIR/src/whiteboard-common-shape.js \
+--js $BASEDIR/src/whiteboard-circle.js \
+--js $BASEDIR/src/whiteboard-cursor.js \
+--js $BASEDIR/src/whiteboard-message.js \
+--js $BASEDIR/lang/lang-en.js \
+--js $BASEDIR/lang/lang-pt_br.js \
+--js $BASEDIR/lang/lang-es.js \
 --js $BASEDIR/src/lang.js \
 --js $BASEDIR/src/view.js \
 --js $BASEDIR/src/system.js \
---js $BASEDIR/src/whiteboard-packetcontainer.js \
---js $BASEDIR/src/whiteboard-drawobject.js \
---js $BASEDIR/src/whiteboard-make-object.js \
---js $BASEDIR/src/whiteboard-canvas-utility.js \
---js $BASEDIR/src/whiteboard-canvas-main.js \
---js $BASEDIR/src/whiteboard-events.js \
---js $BASEDIR/src/whiteboard-virtualbox.js \
---js $BASEDIR/src/whiteboard-interact.js \
 --js $BASEDIR/src/whiteboard-rectangle.js \
---js $BASEDIR/src/whiteboard-oval.js \
 --js $BASEDIR/src/whiteboard-triangle.js \
 --js $BASEDIR/src/whiteboard-line.js \
 --js $BASEDIR/src/whiteboard-text.js \
 --js $BASEDIR/src/whiteboard-freedrawing.js \
---js $BASEDIR/src/whiteboard-path.js \
---js $BASEDIR/src/whiteboard-mouse.js \
---js $BASEDIR/src/whiteboard-readyfreehandobj.js \
---js $BASEDIR/src/whiteboard-refresh-play.js \
---js $BASEDIR/src/whiteboard-readytextobj.js \
---js $BASEDIR/src/whiteboard-keyboard.js \
 --js $BASEDIR/src/webrtc-adapter.js \
---js $BASEDIR/src/audio-resampler.js \
 --js $BASEDIR/src/media.js \
 --js $BASEDIR/src/pptshare.js \
---js $BASEDIR/src/whiteboard-optimization.js \
 --js $BASEDIR/src/receive-messages-response.js \
 --js $BASEDIR/src/lzstring.js \
 --js $BASEDIR/src/screenshare-getscreen.js \
@@ -93,7 +86,6 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/jquery.ui.chatroom.js \
 --js $BASEDIR/src/chat-boxManager.js \
 --js $BASEDIR/src/chat-lib.js \
---js $BASEDIR/src/chat-lang.en.js \
 --js $BASEDIR/src/precheck.js \
 --js $BASEDIR/src/video-base64.min.js \
 --js $BASEDIR/src/video-ajax.js \
@@ -142,7 +134,7 @@ java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZ
 --js $BASEDIR/src/index.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
---source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
+--source_map_location_mapping="/Applications/Mamp/htdocs/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
 --output_wrapper "%output%
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 
