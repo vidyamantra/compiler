@@ -12,6 +12,8 @@ java -jar /Applications/Mamp/htdocs/compiler/compiler.jar --compilation_level SI
 --js $BASEDIR/src/worker/worker-audio-send.js \
 --js $BASEDIR/src/worker/worklet-audio-rec.js \
 --js $BASEDIR/src/worker/worklet-audio-send.js \
+--js $BASEDIR/src/audio-resampler.js \
+--js $BASEDIR/src/audio-codec-g711.js \
 --js $BASEDIR/src/worker/webptopng.js \
 --js $BASEDIR/src/io.js \
 --js $BASEDIR/src/modernizr.js \
