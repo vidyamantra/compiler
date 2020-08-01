@@ -1,8 +1,8 @@
  #!/bin/sh
 
-BASEDIR="/Applications/Mamp/htdocs/virtualclass"
+BASEDIR="/var/www/html/virtualclass"
 
-java -jar /Applications/Mamp/htdocs/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2018 --language_out=ECMASCRIPT_2018 \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --warning_level QUIET --rewrite_polyfills=false  --language_in=ECMASCRIPT_2018 --language_out=ECMASCRIPT_2018 \
 --js $BASEDIR/src/keyboard.js \
 --js $BASEDIR/src/worker/screendecode.js \
 --js $BASEDIR/src/worker/screenworker.js \
@@ -133,10 +133,12 @@ java -jar /Applications/Mamp/htdocs/compiler/compiler.jar --compilation_level SI
 --js $BASEDIR/src/user-interactivity.js \
 --js $BASEDIR/src/rightbar.js \
 --js $BASEDIR/src/back-detect.js \
+--js $BASEDIR/src/live-stream.js \
 --js $BASEDIR/src/index.js \
+--js $BASEDIR/src/installPrompt.js \
 --create_source_map $BASEDIR/build/src/wb-map \
 --source_map_format=V3 \
---source_map_location_mapping="/Applications/Mamp/htdocs/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
+--source_map_location_mapping="/var/www/html/virtualclass/src/|https://live.congrea.net/virtualclass/src/" \
 --output_wrapper "%output%
 //# sourceMappingURL=https://live.congrea.net/virtualclass/build/src/wb-map" \
 --js_output_file $BASEDIR/build/src/wb.min.js 

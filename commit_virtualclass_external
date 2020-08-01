@@ -1,8 +1,8 @@
 #!/bin/sh
 
-BASEDIR="/Applications/Mamp/htdocs/virtualclass"
+BASEDIR="/var/www/html/virtualclass"
 
-java -jar /Applications/Mamp/htdocs/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
+java -jar /var/www/html/compiler/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS  --language_in=ES6 \
 --js $BASEDIR/external/src/axios.js \
 --js $BASEDIR/external/src/wave.js \
 --js $BASEDIR/external/src/wave-mic.js \
